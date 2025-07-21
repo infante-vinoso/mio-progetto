@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+
+<head> 
+<style>
+    
+    p {font-family: 'orbitron', sans-serif;
+       color: rgb(208, 255, 0);
+       text-align: center;
+       font-size: large;} 
+     
+
+
+
+    .glitch {
+  font-size: 3rem;
+  font-weight: bold;
+  letter-spacing: 1px;
+  color:rgb(7, 241, 210);
+  position: relative;
+  text-transform: uppercase;
+  animation: flicker 1s infinite;
+}
+
+.glitch:before,
+.glitch:after {
+  content: attr(data-text);
+  position: absolute;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+}
+
+.glitch:before {
+  color: #f0f;
+  z-index: -1;
+  top: -2px;
+  animation: glitchTop 1s infinite;
+}
+
+.glitch:after {
+  color: #0ff;
+  z-index: -1;
+  top: -2px;
+  animation: glitchBottom 1s infinite;
+}
+
+@keyframes glitchTop {
+ 0% { clip-path: inset(0 0 80% 0); transform: translate(-2px, -2px); }
+20% { clip-path: inset(20% 0 60% 0); transform: translate(2px, -2px); }
+40% { clip-path: inset(40% 0 40% 0); transform: translate(-1px, 1px); }
+60% { clip-path: inset(60% 0 20% 0); transform: translate(1px, -1px); }
+80% { clip-path: inset(80% 0 0 0); transform: translate(-1px, 1px); }
+100% { clip-path: inset(0 0 80% 0); transform: translate(0, 0); }
+}
+
+
+
+@keyframes glitchBottom {
+0% { clip-path: inset(80% 0 0 0); transform: translate(2px, 2px); }
+20% { clip-path: inset(60% 0 20% 0); transform: translate(-2px, 2px); }
+40% { clip-path: inset(40% 0 40% 0); transform: translate(1px, -1px); }
+60% { clip-path: inset(20% 0 60% 0); transform: translate(-1px, 1px); }
+80% { clip-path: inset(0 0 80% 0); transform: translate(1px, -1px); }
+100% { clip-path: inset(80% 0 0 0); transform: translate(0, 0); }
+    }
+
+@keyframes flicker {
+      0%, 19%, 21%, 23%, 25%, 54%, 56%, 100% {
+        opacity: 1;
+      }
+      20%, 24%, 55% {
+        opacity: 0.6;
+      }
+    }
+
+    
+    
+
+
+</style>
+ <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700&display=swap" rel="stylesheet">
+</head>
+<body style="margin: 0; height: 100vh;
+             background: linear-gradient(135deg, #0f0f1a, #1a1a2e);
+             font-family: 'orbitron', sans-serif;
+             overflow: hidden;">
+    <h1 class="glitch" data-text="SUPPOSTARE..." style="font-family: 'orbitron', sans-serif;font-size: 400%; font-weight: 900%; text-align: center;">SUPPOSTARE...</h1>
+    <p>
+     Tu mi <span style="color:rgb(255, 0, 128) ">SUPPOSTI...</span> ora definiamo questo termine:
+    </p>
+
+    <p style="font-weight: 700%; font-size: 200%; text-align: center; color: #ff003c;">
+    Chi è la persona che ti supposta?
+    </p>
+
+    <p>
+    è la persona che, quando stai male, ti porta una tachipirina con un bicchiere d'acqua e ti dice di prenderla.<br>Ma scopre che non sei in grado di ingoiarla e incapace di farti una puntura, è pronto ad oliare una supposta e mettertela nel culo. <br>Non so se vedi quello che vedo io, ma sto termine è una <span style="color: rgb(255, 0, 128); font-weight: 600;font-size: medium;">MINA</span>.&#x1F92F;
+    </p>
+
+   <p>
+    è un'unione tra supporto e sopportazione, perchè puoi sia dire: "oddio questa non sa pija una pasticca" e quindi sopporti, però allo stesso tempo supporti,<br> perchè gli vuoi bene e invece di far sentire in colpa l'altra persona della sua incapacità; gli metti la supposta. 
+   </p>
+   <p>
+    Quindi la supposta è un atto di amore e anche di fiducia da parte di entrambe le parti <br>(io la supposta non me la farei mette da nessuno)
+   </p>
+<p>
+    E quindi nulla: <span style="color: rgb(255, 0, 128);">MI SUPPOSTI!</span>
+    <br>(mi sono dilungata troppo forse...) <!--AAAAAA CAZZO PAOLOOOOO, NON PUOI CAPIRE CHE CASINO PER STA CAZZO DE SCRITTA ALLA CYBERPUNK, SO IMPAZZITAAAAAA, MA CE L'HO FATTA TROPPO CONTENTAAAAAAAA-->
+    <!--in diretta ti dico una cosa, ero felice dell'effetto, ma ce ne è uno meglio...mi sto impelagando in questa missione, fatti spiegare dalla me del futuro che cazzo ho dovuto fare. Alla fine ci ho scritto il titolo così, non sono riuscita a non farmi scappare qualcosa, spero tu non abbia capito-->
+</p>
+
+<!--so che ti piace l'ambientazione cyberpunk e volevo ricrearla in qualche modo, porbabilmente rimarrai cieco dopo aver letto questa pagina. l'altra lho voluta fare piu romantica -->
+
+<p>
+    ok è ora di tornare al messaggione.<br>Clicca qui per tornarci: <br><a style="color: rgb(0, 128, 255);" href="officialmessaggione.html#pagina-di-ritorno">Ti amo tanto amore mio. Ancora auguri mio super P</a>&#128153;
+</p>
+</body>
+</html>

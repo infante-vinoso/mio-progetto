@@ -1,0 +1,530 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style> /*te giuro amore sto provando tutti i font, non so quale scegliereeee, vorrei chiederti un consiglio. ma no devo resistere. comunque sto scirvendo questa cosa il 16 luglio, te hai la febbre e stai dormendo*/
+        p {text-align: center; 
+           font-family: 'Lobster', cursive;
+           font-size: large;}
+    
+        #titolo {text-align: center;}
+
+        .sfumatura {background: linear-gradient(90deg, rgb(227, 6, 6) 0%,rgb(194, 13, 86) 50%, rgb(36, 93, 191)) 90%;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        color: transparent;
+        font-family: 'dancing script', cursive;
+        font-size: larger;}/*ti amo tanto paoloooo*/
+
+        .fuoco {font-family: fantasy;
+            font-size: xx-large;
+            background: linear-gradient(#ff0800 40%, rgb(255, 187, 0) 70% );
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            color: transparent;
+            -webkit-text-stroke: 0.9px rgb(186, 0, 0);}
+/*amore mio, potrei fare cosi tante cose, è un peccato doverne scegliere solo alcune, facciamo qualcosa insiemeeee*/
+        .ruota {display: inline-block;
+                font-size: 3rem;
+                animation: gira 5s linear infinite;}
+
+        @keyframes gira {from {transform: rotateY(180deg);}}
+
+        /*Ogni tanto me so persa qualche virgola, quindi non funzionava come volevoooo. Ma quanta soddisfazione provo ogni volta che trovo l'errore e tutto funziona come dovrebbe, neanche uccidendo le zanzare provo tutta questa soddisfazione*/
+
+        .arcobaleno {background: linear-gradient(90deg, red, orange, rgba(226, 242, 4, 0.878), green, blue, indigo, violet); 
+                     -webkit-background-clip: text;
+                     -webkit-text-fill-color: transparent;
+                     background-clip: text;
+                     color: transparent;
+                     -webkit-text-stroke: 0.5px black;}
+
+        
+         .shine {background: linear-gradient(90deg, #0cc24c, #1125a1, #e10627);
+                background-size: 200% auto;
+                background-clip: text;
+               -webkit-background-clip: text;
+               -webkit-text-fill-color: transparent;
+                animation: shine 6s linear infinite;
+                font-weight: 700;}
+
+        @keyframes shine {
+        to {background-position: -200% center;}}
+
+        a.no-outline:focus {outline: none;}
+
+
+         .content {
+      transition: opacity 0.4s ease;
+      position: relative;
+      z-index: 1;
+    }
+
+    .hidden {
+      opacity: 0;
+      pointer-events: none;
+    }
+
+    .cyberword {
+      display: inline;
+      cursor: pointer;
+      transition: color 0.3s ease;
+    }
+
+    .cyberword:hover {
+      color: #f0f;
+      text-shadow: 0 0 5px #f0f, 0 0 15px #f0f;
+    }
+
+    .overlay-bg {
+      position: fixed;
+      top: 0; left: 0;
+      width: 100vw;
+      height: 100vh;
+      background-color: rgba(10, 10, 10, 0.95); 
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.4s ease;
+      z-index: 2;
+    }
+
+    .overlay-bg.show {
+      opacity: 1;
+      pointer-events: auto;
+    }
+
+    .overlay-letter {
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      font-size: 140px;
+      font-weight: bold;
+      color: #00fff7;
+      opacity: 0;
+      z-index: 3;
+      text-shadow:
+        0 0 5px #00fff7,
+        0 0 15px #ff00cc,
+        0 0 30px #ff00cc,
+        0 0 60px #fff200;
+      transition: opacity 0.3s ease;
+      pointer-events: none;
+    }
+
+    .overlay-letter.show {
+      opacity: 1;
+      animation: glitchCyber 1.3s ease forwards;
+    }
+
+    @keyframes glitchCyber {
+      0% {
+        transform: translate(-50%, -50%) scale(0.8);
+        opacity: 0;
+      }
+      30% {
+        transform: translate(-50%, -50%) scale(1.4);
+        opacity: 1;
+      }
+      60% {
+        transform: translate(-50%, -50%) scale(1.2) rotate(1deg);
+        opacity: 0.9;
+      }
+      90% {
+        transform: translate(-50%, -50%) scale(1.3) rotate(-1deg);
+        opacity: 0.4;
+      }
+      100% {
+        transform: translate(-50%, -50%) scale(1);
+        opacity: 0;
+      }
+    }
+
+       .primafrase {background: linear-gradient(90deg, rgb(0, 128, 62), green, rgb(5, 88, 120));
+                    font-size: 200%;
+                    background-clip: text;
+                    -webkit-background-clip: text;
+                    -webkit-text-fill-color: transparent;
+                    color: transparent;}
+
+
+        
+
+
+        .glitch {font-size: 3rem;
+                 font-family: 'orbitron', sans-serif;
+                 -webkit-text-stroke: 0.8px black;
+                 font-weight: bold;
+                 letter-spacing: 1px;
+                 color: rgb(0, 242, 255);
+                 position: relative;
+                 text-transform: uppercase;
+                 animation: flicker 1s infinite;}
+
+        .glitch:before,
+        .glitch:after { content: attr(data-text);
+                        position: absolute;
+                        left: 0;
+                        width: 100%;
+                        overflow: hidden;}
+
+         .glitch:before {color: #f0f;
+                         z-index: -1;
+                         top: -2px;
+                         animation: glitchTop 1s infinite;}
+
+          .glitch:after {color: #0ff;
+                         z-index: -1;
+                         top: -2px;
+                          animation: glitchBottom 1s infinite;}
+
+@keyframes glitchTop {
+ 0% { clip-path: inset(0 0 80% 0); transform: translate(-2px, -2px); }
+20% { clip-path: inset(20% 0 60% 0); transform: translate(2px, -2px); }
+40% { clip-path: inset(40% 0 40% 0); transform: translate(-1px, 1px); }
+60% { clip-path: inset(60% 0 20% 0); transform: translate(1px, -1px); }
+80% { clip-path: inset(80% 0 0 0); transform: translate(-1px, 1px); }
+100% { clip-path: inset(0 0 80% 0); transform: translate(0, 0); }
+}
+
+
+
+@keyframes glitchBottom {
+0% { clip-path: inset(80% 0 0 0); transform: translate(2px, 2px); }
+20% { clip-path: inset(60% 0 20% 0); transform: translate(-2px, 2px); }
+40% { clip-path: inset(40% 0 40% 0); transform: translate(1px, -1px); }
+60% { clip-path: inset(20% 0 60% 0); transform: translate(-1px, 1px); }
+80% { clip-path: inset(0 0 80% 0); transform: translate(1px, -1px); }
+100% { clip-path: inset(80% 0 0 0); transform: translate(0, 0); }
+    }
+
+@keyframes flicker {
+      0%, 19%, 21%, 23%, 25%, 54%, 56%, 100% {
+        opacity: 1;
+      }
+      20%, 24%, 55% {
+        opacity: 0.6;
+      }
+    }
+
+       .error-popup {
+      position: fixed;
+      top: 30%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 320px;
+      background: #fff;
+      border: 2px solid #f44336;
+      padding: 20px;
+      box-shadow: 0 0 20px rgba(244, 67, 54, 0.5);
+      font-family: 'Courier New', monospace;
+      display: none;
+      z-index: 9999;
+      animation: pulse 1.5s infinite;
+    }
+
+    @keyframes pulse {
+      0% {
+        transform: translate(-50%, -50%) scale(1);
+        box-shadow: 0 0 20px rgba(244, 67, 54, 0.5);
+      }
+      50% {
+        transform: translate(-50%, -50%) scale(1.05);
+        box-shadow: 0 0 30px rgba(244, 67, 54, 0.8);
+      }
+      100% {
+        transform: translate(-50%, -50%) scale(1);
+        box-shadow: 0 0 20px rgba(244, 67, 54, 0.5);
+      }
+    }
+
+    .error-popup h3 {
+      margin: 0 0 10px;
+      color: #f44336;
+    }
+
+    .error-popup p {
+      margin: 0 0 15px;
+      color: #333;
+    }
+
+    .error-popup button {
+      background: #f44336;
+      color: white;
+      border: none;
+      padding: 8px 12px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+
+    .error-popup button:hover {
+      background: #d32f2f;
+    } 
+
+.container {
+      position: relative;
+      display: inline-block;
+    }
+
+    .auguri {
+      font-size: 60px;
+      font-weight: bold;
+      color: #ff4d4d;
+      text-shadow: 2px 2px 0 #fff176, 4px 4px 0 #81d4fa;
+      padding: 20px;
+      z-index: 1;
+      position: relative;
+    }
+
+    .coriandolo {
+      position: absolute;
+      width: 8px;
+      height: 8px;
+      background: red;
+      border-radius: 50%;
+      opacity: 0.8;
+      animation: fall linear forwards;
+    }
+
+    @keyframes fall {
+      to {
+        transform: translateY(100px) rotate(360deg);
+        opacity: 0;
+      }
+    }
+
+
+#audioPlayer {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    width: 150px;
+    outline: none;
+    z-index: 9999;
+  }
+
+  #scritta  {display: block;
+             font-family:'lobster', cursive ;
+             font-size: 16px;
+             margin-top: 8px;
+             text-align: center;
+            transform: translateX(55px);}
+
+        </style>
+    
+    
+    </head>
+    <body style="background-color: #FFF5E1	;">
+        <h1 style="font-family: 'Lobster', cursive;" 
+        id="titolo"><span class="ruota">&#10084;&#65039;</span>MESSAGGIONE DI COMPLEANNO<span class="ruota">&#10084;&#65039;</span></h1>
+
+        <div class="content" id="pageContent"> <!--sto a scrive una cosa me sta a fa impazzi, il famoso tutto sparirà--> 
+        <p> <!--oddio amore ho scoperto che le emoji si inseriscono con un codice, non ne avevo idea. Adoro-->
+         Eccoci finalmente qui! Si amore mio, è arrivato il momento del super messaggione per il tuo compleanno.<br>(Non ho il dono della sintesi quindi mettiti comodo e non escludere l'utilizzo dello <span class="cyberword" onmouseenter="revealLetter('T')">sboccaffè</span>).</p>
+        </div>
+
+         <div class="overlay-letter" id="overlay-letter">T</div>
+
+        <div class="overlay-bg" id="overlay-bg"></div>
+
+
+         <p>
+         Sai, sono mesi che cerco l'idea vincente, qualcosa che fosse davvero degno di dimostrare quanto tu sia speciale. <br>Ma c'era sempre qualcosa che non mi convinceva.
+       </p>
+       <p>
+        Alla fine ho optato per questo, anche se mi sembra sempre troppo poco per te.
+        <br>Mi sono immersa in questa missione di imparare a fare tutto questo solo per provare a creare qualcosa che potesse piacerti.
+       </p>
+
+        <div class="content" id="pageContent">
+       <p> <!--non mi accontento mai, ora sto per provare a fare una cosa, madonna io ho paura de cancella tutto. comunque domanda, io ho visto il codice di qualche pagina su google, esatto ho scoperto anche questa cosa figa, pero a malapena c'è il testo, è dunque giusto scrivere tutto sto testo?penso de si-->
+        Ho capito che non sarebbe stato il messaggione in sè a dimostrarti il <span class="cyberword" onmouseenter="revealLetter('I')">mio amore</span>, ma il pensiero e il lavoro dietro.
+        <br> Meriti tutto il tempo che ho impiegato ad imparare tutto questo;
+        <br>meriti tutte le ore di sonno perse per pensare a cosa scrivere, come scriverlo, ai colori, ai font, alle parti interattive.
+        <br>Meriti anche il sudore delle mie mani sulla tastiera
+        <br>(Te giuro mai sudato così tanto dalle mani, vuol dire che ho fatto la trasformazione finale in informatica!)
+       </p>
+       </div>
+       <div class="overlay-letter" id="overlay-letter">I</div>
+
+        <div class="overlay-bg" id="overlay-bg"></div>
+      
+      <p>
+       Oltre a questo, è anche un altro il pensiero che mi ha portato a scegliere di fare questo pensierino per te:<br>da quando sto con te, nel mio mondo sono apparsi nuovi colori.<br>Mi hai dato una forza nuova per affrontare le cose, mi hai fatto scoprire cose che non pensavo di poter apprezzare o capire
+       <br>(non sai quanto mi sia piaciuto scoprire tutte ste cazzo de cose fighissime per farti questo regalino).
+       <br>Anzi, ho adorato farlo e non sai quanto sia stato difficile non coinvolgerti in tutto quello che imparavo.
+      </p>
+
+      <p>
+      Mamma mia, quanto avei voluto scriverti ogni cosa interessante che scoprivo e che facevo!
+      </p>
+    
+      <p>
+      Penso che, se avessi ancora come cartuccia il regalo dei 100 bigliettini, sforerei di gran lunga, perchè tutto di te è stupendo: le piccole e le grandi cose.
+      </p>
+
+      <p> <!--non ci crederai, per fare sta frase ci ho messo un sacco, non capivo cosa avevo fatto di sbagliato...ho scritto classe invece di class-->
+       <span class="sfumatura">Sei gentile, simpatico, intelligente, determinato, romantico...</span>
+      </p>
+      <p style="font-size: xx-large;">
+       &#128293 <span class="fuoco"> SEXY </span> &#128293
+      </p>
+
+      <div class="content" id="pageContent">
+      <p>
+        Adoro:<br> le voci buffe che fai;<br> i video scemi <span class="cyberword" onmouseenter="revealLetter('A')">solo per farmi ridere</span>;<br> il tuo parlare delle strategie del Fanta; <br>(mi toccherà sudare anche su questo per poter contribuire)<br>i video delle micione dove si sentono le tue vocine e si vedono le tue mani che muovono i fili che le fanno impazzire; <br> le facce che fai quando, durante le videochiamate, senti qualcuno passare e sgrani gli occhi pronto a chiudere il computer;<br> quando faccio i vocali o scrivo qualcosa e di proposito cerchi di distrarmi dicendomi cose carine;<br>il fatto che butti tutto nel trono; <br>il fatto che crolli e che, prima di farlo, cominci a scapocciare e mi arrivano messaggi super strani;<br> parlare di film con te e vedere il tuo sguardo agguerrito, pronto a dire tutto quello che pensi e a farmi cambiare idea (lotta lotta, sono molto testarda!); <br>il modo in cui mi guardi e mi fai sentire amata;<br> il modo in cui mi coccoli quando, sull'autobus, mi addormento sulla tua spalla <br>(ho cioccato dei bacini sulla testa mentre dormivo &#129392);<br> il fatto che cerchi sempre di aiutarmi;<br>l'impegno che ci metti per fare tutte le uscite che voglio.
+      </p>
+      </div>
+
+      <!--che poi vb mi sono resa conto che tu per guardare il codice dovrai fare il famoso ctrlU, siii ho imparato anche questo e vb non ci stanno le scritte verdi come qui, quindi vedere questi appunti sara quasi impossibile, poi sta uscendo più lungo del previsto-->
+      <div class="overlay-letter" id="overlay-letter">A</div>
+
+      <div class="overlay-bg" id="overlay-bg"></div>
+      
+      <p class="shine";>
+       E HO DETTO ANCHE POCO!</p>
+       
+      
+
+      <p>
+        Tutto di te è stupendo. Riesci a essere sempre presente e a rendere tutti i momenti <span class="arcobaleno">MAGICI</span>&#127752;
+      </p>
+
+      <div class="content" id="pageContent">
+      <p>
+        Non cambierei per nulla al mondo:<br>le nostre uscitine sulla panchina del parco con la granita in mano, facendo il controllo qualità e parlando della tattica più giusta per mangiarla;<br>lo sprizt al parco che, dopo due sorsi, ci incoccia;<br> <span class="cyberword" onmouseenter="revealLetter('M')">stare sdraiati sui prati</span>, uscendo con 200 gradi all'ombra e vederti combattere con tutti gli insetti;<br> i tuoi calci rotanti volanti;<br>quando fai la salsiccia alla griglia.
+      </p>
+      </div>
+      <div class="overlay-letter" id="overlay-letter">M</div>
+
+      <div class="overlay-bg" id="overlay-bg"></div>
+
+       <div style="display: flex; align-items: center; justify-content: center; text-align: center; gap: 20px;">
+   <img src="Prato.jpg" style="width: 360px; float: left; margin-right: 15px; transform: translateX(25px);">
+
+      <p style="font-size: 120%;">
+        <span style="color:red; font-weight: 700;">Sei così pieno Paolo.</span><br>Pieno di carattere, pieno di obiettivi e quando sto con te mi sento piena anche io.<br>Piena di forza e di energia, oltre che di amore e tranquillità.<br>
+      Mi sento amata, a mio agio, supportata...<br>(eh no bello, non dirò il classico "supportata e sopportata"). Apri questo link per maggiori informazioni: <a id="pagina-di-ritorno" class="no-outline" href="supposta.html">Sei.meraviglioso</a>&#128153;
+      </p>
+       </div>
+      <!--Ho fatto del mio meglio a fare i disegni e a posizionarli, ti amo tanto. questa è l'ultima modifica che faccio--> 
+      <div style="display: flex; align-items: center; justify-content: center; text-align: center; gap: 20px;">
+         
+      <div class="content" id="pageContent">
+
+      <p>
+      Tornando a noiii:<br> amo il tuo sguardo gentile e innamorato che mi fa ogni volta sentire le farfalline nello stomaco;<br>amo il tuo sorriso dolcissimo e bellissimo;<br> amo quando mi assecondi nei balli, nelle facce, negli scherzi;<br>adoro la nostra complicità nata già il primo giorno.<br>Ricordo come fosse ieri il giorno in cui ho sentito per la prima volta la tua voce e visto il tuo sorriso;<br>ricordo il famoso <span class="cyberword" onmouseenter="revealLetter('O')">3 Dicembre</span> e la frase: "ho tutto il tempo".<br>Da quel giorno è cambiato tutto, non c'è stato più spazio per nessun altro e non mi sono mai pentita di quel:</p><p class="primafrase">"Ao te stai a fa questa grande pisciata"</p> <p>perchè questa frase <br>(indubbiamente delicatissima e dolcissima, proprio una frase da conquistatrice di uomini)<br> ha segnato l'inizio di questa bellissima relazione.
+      </p>
+    
+      </div>
+       <img src="Ballo.jpg" style="width: 370px;">
+      </div> 
+
+      <div class="overlay-letter" id="overlay-letter">O</div>
+
+      <div class="overlay-bg" id="overlay-bg"></div>
+
+      <p>
+        Non mi sento mai sola. Mi sento ascoltata, vista, amata.
+      </p>
+
+      <div class="content" id="pageContent">
+
+    <p>
+      Ti amo come non ho mai amato e non scherzo quando dico questo.<br>Amo proprio te, amo la tua compagnia, amo parlare con te, amo il tuo modo di parlare, amo il tuo modo di mangiare,<br>amo il tuo odore, amo il tuo modo di scherzare.</p><p class="glitch" data-text="AMO TUTTO" style="font-family: 'orbitron', sans-serif; font-size: 200%; font-weight: 600%; text-align: center;" >AMO TUTTO</p><p>Ho gli occhi felici quando parlo di te e penso a te.<br>Mi piace stare con te, mi piace condividere il tempo con te, mi piace confrontarmi con te su tutti gli argomenti possibili e immaginabili.<br><span style="color: #e10627;" class="cyberword" onmouseenter="revealLetter('❤')">IO PENSO SOLO A TE</span><br> Ti amo tanto tanto. Meriti tutta la felicità che il mondo può offrirti.<br><span class="auguri container">🎉Tanti auguri amore mio🎉</span><br> meriti un compleanno super speciale, pieno solo di gioia e amore.
+    </p>
+    </div>
+    <div class="overlay-letter" id="overlay-letter">❤</div>
+
+    <div class="overlay-bg" id="overlay-bg"></div>
+    
+    <p>E nulla siamo arrivati alla fine...magari per te sarà stata una cosa banale. Ma per me no, <br>l'ho fatto per capirti, per essere un pò più vicina a te, per farti vedere che ciò che ami è importante anche per me.<br> E forse, tra righe di codice e piccoli (anche grandi) errori,<br> ho trovato un nuovo modo per dirti che ho tanta voglia di capirti e di amarti, ogni giorno un pò di più.
+    </p>
+    <p>
+      PS. Ti ho già detto che avrei tanto voluto coinvolgerti in quello che ho imparato e fatto, quindi c'è un'altra cosetta...<br> Nel codice che ho scritto ci sono alcune note che ho lasciato man mano per te, con pensieri, idee, scleri, dubbi ecc... se ti va dagli un'occhiata!
+    </p>
+    <p>
+      Spero che tutto questo ti sia piaciuto.<br> Io sono contenta di essere entrare un pò di più nel tuo mondo.
+    </p>
+
+    <!--ti amo tanto amore mio, mi sto divertendo un sacco a fare queste cose, potrei starci per ore, oh comunque un super codice sta a usci-->
+    <p>
+      PS. 2.0 Ho preparato un altro giochino...passa il mouse su tutte le parole e cerca la parola nascosta...(magari l'hai già trovata mentre leggevi...spero di no)
+    </p>
+
+    <p style="font-size: 400%;">
+      &#10084&#65039;&#128153;&#128154;&#128155;&#128156;
+    </p>
+
+
+    <div class="error-popup" id="loveError">
+    <h3>⚠️ Errore critico </h3>
+    <p>Alessandra ti ama troppo.<br>Rischio esplosione 💘💣</p>
+    <button onclick="closePopup()">Chiudi</button>
+  </div>
+
+  <div id="audioPlayer">
+  <audio controls>
+    <source src="Canzone da dedicare.m4a" type="audio/mpeg">
+    Il tuo browser non supporta l'audio.
+    
+  </audio>
+ <span id="scritta">Questa è per te &#10084&#65039</span>
+  </div>
+    
+
+     <script>
+    function revealLetter(char) {
+      const overlay = document.getElementById("overlay-letter");
+      const content = document.getElementById("pageContent");
+      const darkBg = document.getElementById("overlay-bg");
+
+      overlay.textContent = char;
+      overlay.classList.add("show");
+      darkBg.classList.add("show");
+      content.classList.add("hidden");
+
+      setTimeout(() => {
+        overlay.classList.remove("show");
+        darkBg.classList.remove("show");
+        content.classList.remove("hidden");
+      }, 1500);
+    }
+
+    function closePopup() {
+      document.getElementById("loveError").style.display = "none";
+    }
+
+    setTimeout(() => {
+      document.getElementById("loveError").style.display = "block";
+    }, 60000);
+
+
+    const container = document.querySelector(".container");
+
+    function createCoriandolo() {
+      const coriandolo = document.createElement("div");
+      coriandolo.classList.add("coriandolo");
+
+      const colors = ["#ff4d4d", "#4dd0e1", "#ffd54f", "#ba68c8", "#81c784"];
+      coriandolo.style.background = colors[Math.floor(Math.random() * colors.length)];
+
+
+      coriandolo.style.left = Math.random() * container.offsetWidth + "px";
+      coriandolo.style.top = "-10px";
+      coriandolo.style.animationDuration = (1 + Math.random() * 1.5) + "s";
+
+      container.appendChild(coriandolo);
+
+    
+      setTimeout(() => coriandolo.remove(), 2000);
+    }
+
+    
+    setInterval(createCoriandolo, 100);
+
+  </script>
+    
+    </body>
+</html>
